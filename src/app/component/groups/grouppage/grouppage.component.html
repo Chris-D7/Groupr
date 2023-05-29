@@ -1,0 +1,80 @@
+<div id="index"><app-nav></app-nav></div>
+<div id="body">
+    <div class="overflow-y-auto">
+    <div class="title">
+    <table>
+        <tr>
+            <td colspan="2">
+                <div>
+                    <p class="user-select-none">{{activegroup.name}}</p>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <button class="addbutton" *ngIf="owner" (click)="switch()">Add a member</button>
+    </div>  
+
+
+    <div class="container container-fluid">
+        <div class="row">
+            <div class="col">
+        <div class="participants">
+            <div class="heading">
+                <p class="user-select-none">Participants</p>
+                <hr>
+            </div>
+            <div class="container-fluid overflow-hidden">
+                <div *ngFor="let part of participants">
+                    <p>{{part}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div>
+            <div class="participants">
+                <div class="heading">
+                    <div class="hdg2">
+                    <p class="user-select-none">Events</p>
+                    <button type="button" class="addbutton addbtn2" (click)="show()">Add event</button>
+                    </div>
+                    <hr>
+                </div>
+                <div class="container-fluid overflow-hidden">
+                    <div *ngIf="unevent">
+                        <div class="unevent">
+                            <form>
+                                <div class="container container-fluid">
+                                <div class="field">
+                                    <label for="gname">title: &numsp;</label>
+                                    <input matInput type="text" id="evtitle" name="gname" [(ngModel)]="eventTitle"><br></div>
+                                    <div class="field">
+                                    <label for="gid">event id: &numsp;</label>
+                                    <input matInput type="text" id="evid" name="gid" [(ngModel)]="eventID"><br></div>
+                                    <div class="field">
+                                        <label for="gdesc">description: &numsp;</label>
+                                        <input matInput type="text" id="evdesc" name="gdesc" [(ngModel)]="eventDesc"><br>
+                                </div>
+                                </div>
+                                <button type="button" class="addbutton addbtn3" (click)="submit()">Create event</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="mainevent" *ngFor="let ev of events">
+                        <div class="eventheading d-flex">
+                            <div class="eventtitle p-2 flex-grow-1"><p><a routerLink="/Groups/{{activegroup.id}}/{{ev.id}}" routerLinkActive="active"
+                                ariaCurrentWhenActive="page" class="item">{{ev.title}} </a><span class="eventowner"> by {{ev.owner?.username}}</span></p>
+                            </div>
+                        </div>
+                        <div class="eventdescription d-flex"><p>{{ev.desc}}</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</div>
+</div>

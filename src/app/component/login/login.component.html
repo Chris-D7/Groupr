@@ -1,0 +1,16 @@
+<div id="login">
+    <h1 id="front" class="user-select-none">groupr</h1>
+    <h1 id="fill"></h1>
+    <div id="loginform">
+        <div class="field">
+        <label for="email">email: &numsp;</label>
+        <input matInput type="email" id="username" name="email" [(ngModel)]="userinput"><br></div>
+        <div class="field">
+        <label for="password">password: &numsp;</label>
+        <input matInput type="password" id="password" name="password" [(ngModel)]="passwordinput"><br></div>
+        <div>
+            <a href="/Register">New to Groupr?</a>
+            <button (click)="login()">login</button>
+        </div>
+    </div>
+</div>

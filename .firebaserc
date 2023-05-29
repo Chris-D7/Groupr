@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "groupr-3deb1": {
+      "hosting": {
+        "Groupr": [
+          "groupr-3deb1"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "groupr-3deb1"
+  }
+}

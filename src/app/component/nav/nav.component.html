@@ -1,0 +1,12 @@
+<div class="index"><img src="/assets/img/default-avatar.png" id="pfp">
+    <h1 class="user-select-none">{{username}}</h1>
+    <hr>
+    <nav>
+            <a routerLink="/Home" routerLinkActive="active"
+                ariaCurrentWhenActive="page" class="user-select-none">Home</a>
+            <a routerLink="/Groups" routerLinkActive="active"
+                ariaCurrentWhenActive="page" class="user-select-none">Groups</a>
+            <a routerLink="/Login" routerLinkActive="active"
+                ariaCurrentWhenActive="page" (click)="LogOut()" class="user-select-none">Log Out</a>
+    </nav>
+</div>

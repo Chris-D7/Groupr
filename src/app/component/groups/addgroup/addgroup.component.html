@@ -1,0 +1,12 @@
+<div id="index"><app-nav></app-nav></div>
+<div class="body">
+    <div class="field">
+        <label for="gname">group name: &numsp;</label>
+        <input matInput type="text" id="name" name="gname" [(ngModel)]="groupname"><br></div>
+        <div class="field">
+        <label for="gid">group id: &numsp;</label>
+        <input matInput type="text" id="id" name="gid" [(ngModel)]="groupid"><br></div>
+        <div id="button">
+            <button (click)="addGroup()">add group</button>
+    </div>
+</div>

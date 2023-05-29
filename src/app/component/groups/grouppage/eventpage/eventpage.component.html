@@ -1,0 +1,77 @@
+<div id="index"><app-nav></app-nav></div>
+<div id="body">
+    <div class="overflow-y-auto">
+    <div class="title">
+        <table>
+            <tr>
+                <td>
+                    <div>
+                        <p class="user-select-none">{{currentevent.title}}</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>  
+    <div class="eventheading d-flex">
+        <div class="eventtitle p-2 flex-grow-1"><span class="eventowner"></span>
+        </div>
+    </div>
+    <div class="eventdescription d-flex"><p>{{currentevent.desc}}</p></div>
+    <div class="container container-fluid">
+        <div class="row">
+            <div class="col">
+        <div class="participants">
+            <div class="heading">
+                <p class="user-select-none">Times</p>
+                <hr>
+            </div>
+            <div class="container-fluid overflow-hidden ">
+                
+            <div class="d-flex mb-3 align-items-center">
+                <div class="p-2 d-flex align-self-center flex-column">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="picker" [min]="minDate" disabled [(ngModel)]="day">
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker disabled="false"></mat-datepicker>
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Starting time</mat-label>
+                    <input matInput type="number" placeholder="0" [(ngModel)]="time1" [min]="0" [max]="24">
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>End</mat-label>
+                    <input matInput type="number" placeholder="0" [(ngModel)]="time2" [min]="time1" [max]="24">
+                </mat-form-field> 
+                </div>
+                <div class="p-2 align-self-center">
+                    <button class="btn svgbutton" (click)="addTime()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-plus" viewBox="0 0 16 16">
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                    </svg>
+                    </button>
+                </div>
+            </div>
+            <table class="timetable table">
+                <thead>
+                  <tr>
+                    <th scope="col">Username</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Time</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let part of currentevent.times">
+                    <td>{{part.username}}</td>
+                    <td>{{convertTimestampToDate(part.day) | date:'dd.MM.yy'}}</td>
+                    <td><span *ngFor="let time of part.time"> {{time}} </span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</div>
+</div>

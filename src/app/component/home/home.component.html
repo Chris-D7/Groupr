@@ -1,0 +1,39 @@
+<div id="index"><app-nav></app-nav></div>
+<div id="body">
+    <div class="overflow-y-auto">
+    <div id="title">
+    <table>
+        <tr>
+            <td colspan="2">
+                <div>
+                    <p class="user-select-none">Home</p>
+                </div>
+            </td>
+        </tr>
+    </table>
+    </div>
+    <div class="participants">
+            <div class="heading">
+                <p class="user-select-none">Events</p>
+                <hr>
+            </div>
+            <div class="container-fluid overflow-hidden">
+                        <div>
+                            <div class="container-fluid overflow-hidden">         
+                                <div class="mainevent" *ngFor="let ev of userevents">
+                                    <div class="eventheading d-flex">
+                                        <div class="eventtitle p-2 flex-grow-1"><p><a routerLink="/Groups/{{ev.group}}/{{ev.id}}" routerLinkActive="active"
+                                            ariaCurrentWhenActive="page" class="item">{{ev.title}} 
+                                            </a><span class="eventowner"> by {{ev.owner?.username}}
+                                            <a routerLink="/Groups/{{ev.group}}" routerLinkActive="active" ariaCurrentWhenActive="page" class="item">@{{ev.group}}</a>
+                                            </span></p>
+                                        </div>
+                                    </div>
+                                    <div class="eventdescription d-flex"><p>{{ev.desc}}</p></div>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+        </div>
+    </div>
+</div>

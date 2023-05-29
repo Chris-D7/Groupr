@@ -1,0 +1,20 @@
+<div id="login">
+    <h1 id="front" class="user-select-none">groupr</h1>
+    <h1 id="fill"></h1>
+    <div id="loginform">
+        <div class="field">
+        <label for="email">email: &numsp;</label>
+        <input matInput type="email" id="email" name="email" [(ngModel)]="userinput"><br></div>
+        <div class="field">
+        <label for="username">username: &numsp;</label>
+        <input matInput type="text" id="username" name="username" [(ngModel)]="usernameinput"><br></div>
+        <div class="field">
+        <label for="password">password: &numsp;</label>
+        <input matInput type="password" id="password" name="password" [(ngModel)]="passwordinput"><br></div>
+        <div>
+            <a href="/Login">Already have an account?</a>
+            <button (click)="register()">register</button>
+        </div>
+    </div>
+</div>
+

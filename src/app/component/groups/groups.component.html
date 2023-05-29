@@ -1,0 +1,23 @@
+<div id="index"><app-nav></app-nav></div>
+<div class="body overflow-hidden">
+    <div id="title">
+    <table>
+        <tr>
+            <td colspan="2">
+                <div>
+                    <p class="user-select-none">Groups</p>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <button (click)="switch()">Create a new group</button>
+    </div>
+    <div id="list" class="float-start">
+        <div *ngFor="let group of currentgroups">
+            <a routerLink="/Groups/{{group.id}}" routerLinkActive="active"
+              ariaCurrentWhenActive="page" class="item">
+              {{group.name}}
+            </a>
+        </div>
+    </div>
+</div>

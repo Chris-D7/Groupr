@@ -1,0 +1,120 @@
+#login{
+    font-family: 'Century Gothic';
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    height:100%;
+    width:auto;
+}
+#login h1{
+    font-family: 'Century Gothic';
+    font-weight: 500;
+    padding-top: 4px;
+    padding-left: 20px;
+    width:620px;
+    font-size: 175px;
+    min-height: 175px;
+    letter-spacing: 10px;
+    margin-top: min(9%, 150px);
+    margin-left: 12%;
+    margin-bottom: -320px;
+    border-radius: 50px;
+    background-color: #3C6255;
+    color:#EAE7B1;
+    position: static;
+    z-index: 1;
+    transition: 0.3s;
+}
+#login #front:hover + #fill{
+    background-color: #3C6255;
+    transition: 0.3s;
+}
+#login #front:hover{
+    background-color: #EAE7B1;
+    color: #3C6255;
+    transition: 0.8s;
+    cursor: default;
+}
+#login #fill{
+    display: block;
+    margin-left: 10%;
+    margin-top: min(11%, 190px);
+    z-index: 0;
+    background-color: #EAE7B1;
+    transition: 0.8s;
+    position: absolute;
+}
+#loginform{
+    margin-top: 450px;
+    margin-left: 18%;
+    width:350px;
+    height:500px;
+}
+#loginform form{
+    color:#EAE7B1;
+    font-size: 30px;
+    display:inline;
+    align-content: end;
+    position: static;
+    height:500px;
+}
+#loginform input{
+    margin-top: -6px;
+    margin-left: 10px;
+    height:40px;
+    width:343px;
+    float: right;
+    background-color: #3C6255;
+    border: none;
+    border-radius: 20px;
+    color: #EAE7B1;
+    font-family: 'Century Gothic';
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    outline:none;
+}
+#loginform .field{
+    margin-bottom: 60px;
+}
+#loginform button{
+    margin-top: 10px;
+    position: relative;
+    float:right;
+    align-self: center;
+    background-color: #EAE7B1;
+    color: #3C6255;
+    font-family: inherit;
+    font-size: 20px;
+    border: none;
+    border-radius: 25px;
+    height: 50px;
+    width: 120px;
+    transition: 0.5s;
+}
+#loginform button:hover{
+    background-color:#3C6255;
+    color:#EAE7B1;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#loginform label{
+    color:#EAE7B1;
+    font-size: 25px;
+    font-weight: 100;
+    margin-left: 5px;
+}
+#loginform a{
+    text-decoration: underline;
+    color: #EAE7B1;
+    margin-left: 5px;
+}
+#loginform a:hover{
+    color: #3C6255;
+}
+.index{
+    color: #EAE7B1;
+    display: flex;
+    flex-direction: column;
+}

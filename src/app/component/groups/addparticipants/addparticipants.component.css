@@ -1,0 +1,75 @@
+#index{
+    display:flex;
+    flex-direction: column;
+    width:15%;
+    height:100%;
+    position:fixed;
+    background-color: #3C6255;
+    color: #EAE7B1;
+    flex-direction: column;
+    font-family: 'Century Gothic';
+    font-weight: 500;
+    min-width: 200px;
+}
+.body{
+    position: fixed;
+    display: flex;
+    margin-left: max(200px, 15%);
+    width: 85%;
+    height: 100%;
+    flex-direction: column;
+}
+.field{
+    float: right;
+    margin-top: 50px;
+    margin-left: 10%;
+    width:350px;
+    height:50px;
+    font-family: 'Century Gothic';
+}
+.field input{
+    float:center;
+    margin-top: -6px;
+    margin-left: 10px;
+    height:40px;
+    width: 343px;
+    float: right;
+    background-color: #3C6255;
+    border: none;
+    border-radius: 20px;
+    color: #EAE7B1;
+    font-family: 'Century Gothic';
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    outline:none;
+}
+#button button{
+    margin-top: 50px;
+    margin-left: calc(10% + 180px);
+    position: relative;
+    float:center;
+    align-self: center;
+    background-color: #EAE7B1;
+    color: #3C6255;
+    font-family: 'Century Gothic';
+    font-size: 20px;
+    font-weight:100;
+    border: none;
+    border-radius: 25px;
+    height: 50px;
+    width: 170px;
+    transition: 0.5s;
+}
+#button button:hover{
+    background-color:#3C6255;
+    color:#EAE7B1;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.field label{
+    color:#EAE7B1;
+    font-size: 25px;
+    font-weight: 100;
+    margin-left: 5px;
+}
